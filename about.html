@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Electron App</title>
+</head>
+<body>
+    <h1>About Page of my Electron App!</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae officiis, architecto unde, laudantium exercitationem cum est eius dolorem suscipit autem aliquid provident obcaecati quas. Numquam vitae corrupti inventore est quam!</p>
+    <a href="#" id="closeBtn">Close</a>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+<script>
+    var ipc = require('electron').ipcRenderer;
+    var closeButton = document.getElementById('closeBtn');
+    closeButton.addEventListener('click', function(){
+        ipc.send('closeInfoWindow');
+    });
+</script>
+</html>

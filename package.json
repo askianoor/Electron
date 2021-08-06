@@ -1,0 +1,14 @@
+{
+  "name": "my-electron-app",
+  "version": "1.0.0",
+  "description": "My First Electron Project!",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Ali Kianoor",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^13.1.8"
+  }
+}
